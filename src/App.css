@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Add some styles for body*/
+body {
+    margin: 0 auto;
+    background: #111629;
+    color: #3762e4;
+    font-family: 'Sora', sans-serif;
+    line-height: 1.5;
+    background-image: radial-gradient(#111629 1px,transparent 0),radial-gradient(#111629 1px,transparent 0);
+    background-position: 0 0,25px 25px;
+    background-attachment: fixed;
+    background-size: 50px 50px;
+    overflow-x: hidden;
+    padding: 1rem;
+    position: relative;
+}
+
+
+body::before, body::after {
+    content: '';
+    width: 50vh;
+    height: 50vh;
+    border-radius: 30px;
+    background: linear-gradient(-135deg, #3762e4, transparent 70%);
+    position: absolute;
+    top: 45%;
+    right: 20%;
+    transform: translate(0px, -50%) rotate(-45deg);
+    opacity: 0.05;
+}
+
+body::after {
+    top: 55%;
+}
+
+main {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 55;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+}
+
+.title span {
+    font-size: 35px;
+}
+
+.form-group {
+    gap: 20px;
+    border: 2px solid #3762e4;
+    border-radius: 21px;
+    padding: 5px;
+    background: #030617;
+    font-size: 14px;
+    margin-bottom: 3rem;
+}
+
+.form-group button {
+    border-radius: 15px;
+    background: #3762e4;
+    color: #fff;
+    padding: 1rem 2rem;
+    transition: background .2s ease, color .2s ease;
+    flex-shrink: 0;
+
+}
+
+.form-group button:hover {
+    background: #fff;
+    color: #3762e4;
+}
+
+.input-group {
+    flex-grow: 1;
+    width: auto;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 1rem;
+    color: #fff;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    opacity: 0.7;
+}
+
+
+@media screen and (min-width: 720px) {
+    .logo {
+        display: initial;
+    }
+  }
